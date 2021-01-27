@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 import prompt
-from brain_games.games import even
 from brain_games import cli
+from brain_games.games import calc
 
 
 def greet():
@@ -11,7 +11,7 @@ def greet():
 def main():
     greet()
     name = cli.welcome_user()
-    even.parity_number(name)
+    calc.calculator(name)
 
 
 if __name__ == '__main__':
