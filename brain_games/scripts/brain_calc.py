@@ -1,5 +1,4 @@
 #!/usr/bin/env python
-import prompt
 from brain_games import cli
 from brain_games.games import calc
 
