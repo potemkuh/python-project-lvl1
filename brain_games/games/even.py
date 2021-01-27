@@ -12,10 +12,10 @@ def parity_number(name):
         answer = prompt.string('Your answer: ')
         if round_counter == 3:
             print(f"Congratulations, {name}")
-        elif question % 2 == 0 and answer == 'yes' or
+        elif question % 2 == 0 and answer == 'yes' or\
         question % 2 != 0 and answer == 'no':
             print('Correct!')
-        elif question % 2 != 0 and answer == 'yes' or
+        elif question % 2 != 0 and answer == 'yes' or\
         question % 2 == 0 and answer == 'no':
             if question % 2 != 0 and answer == 'yes':
                 print("'yes' is wrong answer ;(. Correct answer was 'no'.")
