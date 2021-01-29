@@ -1,45 +1,58 @@
-import random
+from random import randint, choice
 import prompt
 
 
+def get_numbers():
+    num_1 = randint(1, 20)
+    num_2 = randint(1, 10)
+    return num_1, num_2
+
+
+def get_operator():
+    operator = choice(['+', '-', '*'])
+    return operator
+
+
+def game_over(answer, result, name):
+    print(f'{answer} is wrong answer ;(.')
+    print(f'Correct answer was {result}')
+    print(f"Let's try again, {name}!")
+
+
 def calculator(name):
-    round_counter = 0
+    game_round = 0
     print('What is the result of the expression?')
     while True:
-        round_counter += 1
-        num1 = random.randint(1, 20)
-        num2 = random.randint(1, 10)
-        action = random.choice(['+', '-', '*'])
-        if round_counter == 4:
+        game_round += 1
+        num_1, num_2 = get_numbers()
+        operator = get_operator()
+        if game_round == 4:
             print(f'Congratulations, {name}!')
             break
-        elif action == "+":
-            print(f'Question: {num1} {action} {num2}')
+        elif operator == "+":
+            print(f'Question: {num_1} {operator} {num_2}')
             answer = prompt.string('Your answer: ')
-            if int(answer) == num1 + num2:
+            if answer == str(num_1 + num_2):
                 print('Correct!')
             else:
-                print(f'{answer} is wrong answer ;(.')
-                print(f'Correct answer was {num1 + num2}')
-                print(f"Let's try again, {name}!")
+                result = num_1 + num_2
+                game_over(answer, result, name)
                 break
-        elif action == "-":
-            print(f'Question: {num1} {action} {num2}')
+        elif operator == "-":
+            print(f'Question: {num_1} {operator} {num_2}')
             answer = prompt.string('Your answer: ')
-            if int(answer) == num1 - num2:
+            if answer == str(num_1 - num_2):
                 print('Correct!')
             else:
-                print(f'{answer} is wrong answer ;(.')
-                print(f'Correct answer was {num1 - num2}')
-                print(f"Let's try again, {name}!")
+                result = num_1 - num_2
+                game_over(answer, result, name)
                 break
-        elif action == "*":
-            print(f'Question: {num1} {action} {num2}')
+        elif operator == "*":
+            print(f'Question: {num_1} {operator} {num_2}')
             answer = prompt.string('Your answer: ')
-            if int(answer) == num1 * num2:
+            if answer == str(num_1 * num_2):
                 print('Correct!')
             else:
-                print(f'{answer} is wrong answer ;(.')
-                print(f'Correct answer was {num1 * num2}')
-                print(f"Let's try again, {name}!")
+                result = num_1 * num_2
+                game_over(answer, result, name)
                 break
