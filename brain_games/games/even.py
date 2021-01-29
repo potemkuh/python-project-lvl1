@@ -27,3 +27,4 @@ def parity_number(name):
         else:
             print(f"{answer} is wrong answer ;(.")
             print(f"Let's try again, {name}!")
+            break
