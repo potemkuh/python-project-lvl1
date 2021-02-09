@@ -27,7 +27,3 @@ def game_nod(name):
         else:
             game_over()
             return
-
-
-name = 'gg'
-game_nod(name)

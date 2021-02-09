@@ -46,7 +46,3 @@ def calculator(name):
         else:
             game_over(answer, result, name)
             break
-
-
-name = 'gg'
-calculator(name)
