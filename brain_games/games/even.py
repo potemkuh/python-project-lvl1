@@ -34,7 +34,3 @@ def parity_number(name):
         else:
             return game_over(user_answer, name)
     print(f'Congratulations, {name}!')
-
-
-name = 'gg'
-parity_number(name)
