@@ -13,7 +13,7 @@ def get_progression():
 def hide_number(progression):
     index = randint(0, len(progression) - 1)
     result = progression[index]
-    progression[index] = "..."
+    progression[index] = ".."
     return result, progression
 
 
@@ -26,17 +26,15 @@ def game_over(answer, result, name):
 def game_progression(name):
     print('What number is missing in the progression?')
     game_round = 0
-    while True:
-        game_round += 1
+    while game_round < 3:
+
         progression = get_progression()
         result, question = hide_number(progression)
-        print(f'Question: {question}')
+        print(f'Question:', ' '.join(map(str, question)))
         answer = prompt.string('Your answer: ')
-        if game_round == 3:
-            print(f'Congratulations, {name}!')
-            break
-        elif answer == str(result):
+        if answer == str(result):
             print('Correct!')
         else:
-            game_over(answer, result, name)
-            break
+            return game_over(answer, result, name)
+
+    print(f'Congratulations, {name}!'

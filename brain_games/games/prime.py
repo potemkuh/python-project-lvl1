@@ -3,15 +3,27 @@ from random import randint
 import prompt
 
 
-def is_prime(n):
-    if n < 2:
+def game_over(answer, name):
+    if answer == 'yes':
+        print(f"'{answer}' is wrong answer ;(. Correct answer was 'no'")
+        print(f"Let's try again, {name}!")
+    elif answer == 'no':
+        print(f"'{answer}' is wrong answer ;(. Correct answer was 'yes'")
+        print(f"Let's try again, {name}!")
+    else:
+        print(f"'{answer}' is wrong answer ;(.")
+        print(f"Let's try again, {name}!")
+
+
+def is_prime(num):
+    if num < 2:
         return 'no'
-    if n == 2:
+    if num == 2:
         return 'yes'
-    limit = sqrt(n)
+    limit = sqrt(num)
     i = 2
     while i <= limit:
-        if n % i == 0:
+        if num % i == 0:
             return 'no'
         i += 1
     return 'yes'
@@ -20,19 +32,13 @@ def is_prime(n):
 def game_prime(name):
     game_round = 0
     print('Answer "yes" if given number is prime. Otherwise answer "no".')
-    while True:
-        game_round += 1
-        number = randint(2, 1000)
-        answer = is_prime(number)
+    while game_round < 3:
+        number = randint(2, 500)
         print(f'Question: {number}')
         user_answer = prompt.string('Your answer: ')
-        if game_round == 3:
-            print(f'Congratulations, {name}!')
-            return
-        elif user_answer == answer:
+        if is_prime(number) == user_answer:
+            game_round += 1
             print('Correct!')
         else:
-            print(f"'{user_answer}' is wrong answer ;(.")
-            print(f"Correct answer was '{is_prime(number)}'.")
-            print(f"Let's try again, {name}!")
-            return
+            return game_over(user_answer, name)
+    print(f'Congratulations, {name}!')

@@ -30,7 +30,7 @@ def game_nod(name):
         print(result)
         print(f'Question: {num_1} {num_2}')
         user_answer = prompt.string('Your answer: ')
-        if answer(int(user_answer), result) == True:
+        if answer(int(user_answer), result) is True:
             game_round += 1
             print('Correct!')
         else:

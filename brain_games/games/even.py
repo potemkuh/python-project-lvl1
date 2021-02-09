@@ -28,7 +28,7 @@ def parity_number(name):
         number = random.randint(0, 10)
         print(f'Question: {number}')
         user_answer = prompt.string('Your answer: ')
-        if answer(number, user_answer) == True:
+        if answer(number, user_answer) is True:
             round += 1
             print('Correct!')
         else:
