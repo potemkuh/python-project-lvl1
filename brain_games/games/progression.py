@@ -27,12 +27,12 @@ def game_progression(name):
     print('What number is missing in the progression?')
     game_round = 0
     while game_round < 3:
-
         progression = get_progression()
         result, question = hide_number(progression)
         print(f'Question:', ' '.join(map(str, question)))
         answer = prompt.string('Your answer: ')
         if answer == str(result):
+            game_round += 1
             print('Correct!')
         else:
             return game_over(answer, result, name)
