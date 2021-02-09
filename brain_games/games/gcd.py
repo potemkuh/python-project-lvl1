@@ -27,7 +27,6 @@ def game_nod(name):
     while game_round < 3:
         num_1, num_2 = get_numbers()
         result = gcd(num_1, num_2)
-        print(result)
         print(f'Question: {num_1} {num_2}')
         user_answer = prompt.string('Your answer: ')
         if answer(int(user_answer), result) is True:
