@@ -3,6 +3,13 @@ from math import gcd
 import prompt
 
 
+def game_over():
+    print(
+        f"'{answer}' is wrong answer ;(. Correct answer was '{gcd(number_a,number_b)}'."
+    )
+    print(f"Let's try again, {name}!")
+
+
 def game_nod(name):
     print('Find the greatest common divisor of given numbers.')
     game_round = 0
@@ -18,7 +25,9 @@ def game_nod(name):
         elif answer == str(gcd(number_a, number_b)):
             print('Correct!')
         else:
-            print(f"'{answer}' is wrong answer ;(.")
-            print(f"Correct answer was '{gcd(number_a,number_b)}'.")
-            print(f"Let's try again, {name}!")
+            game_over()
             return
+
+
+name = 'gg'
+game_nod(name)

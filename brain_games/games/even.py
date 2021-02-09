@@ -9,21 +9,32 @@ def answer(num, answer):
         return False
 
 
+def game_over(answer, name):
+    if answer == 'yes':
+        print(f"'{answer}' is wrong answer ;(. Correct answer was 'no'")
+        print(f"Let's try again, {name}!")
+    elif answer == 'no':
+        print(f"'{answer}' is wrong answer ;(. Correct answer was 'yes'")
+        print(f"Let's try again, {name}!")
+    else:
+        print(f"'{answer}' is wrong answer ;(.")
+        print(f"Let's try again, {name}!")
+
+
 def parity_number(name):
-    game_round = 0
+    round = 0
     print('Answer "yes" if the number is even, otherwise answer "no".')
-    while game_round < 3:
-        game_round += 1
+    while round != 3:
         number = random.randint(0, 10)
         print(f'Question: {number}')
         user_answer = prompt.string('Your answer: ')
-        if game_round == 3:
-            print(f"Congratulations, {name}")
-            break
+        if answer(number, user_answer) == True:
+            round += 1
+            print('Correct!')
         else:
-            if answer(number, user_answer) is True:
-                print('Correct!')
-            else:
-                print(f"'{user_answer}' is wrong answer ;(. ")
-                print(f"Let's try again, {name}!")
-                break
+            return game_over(user_answer, name)
+    print(f'Congratulations, {name}!')
+
+
+name = 'gg'
+parity_number(name)

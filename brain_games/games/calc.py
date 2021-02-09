@@ -24,8 +24,7 @@ def good_answer(num1, num2, operator):
 
 
 def game_over(answer, result, name):
-    print(f'{answer} is wrong answer ;(.')
-    print(f'Correct answer was {result}')
+    print(f"'{answer}' is wrong answer ;(. Correct answer was '{result}'")
     print(f"Let's try again, {name}!")
 
 
@@ -47,3 +46,7 @@ def calculator(name):
         else:
             game_over(answer, result, name)
             break
+
+
+name = 'gg'
+calculator(name)
