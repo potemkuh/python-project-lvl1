@@ -46,3 +46,4 @@ def calculator(name):
             print('Correct!')
         else:
             game_over(answer, result, name)
+            break
