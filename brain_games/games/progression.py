@@ -9,6 +9,6 @@ def question_and_answer():
     question = [str(start + step * i) for i in range(10)]
     index = random.randint(0, len(question) - 1)
     result = question[index]
-    question[index] = "..."
+    question[index] = ".."
     new = ' '.join(question)
     return str(new), result
