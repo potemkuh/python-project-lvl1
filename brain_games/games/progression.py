@@ -10,4 +10,4 @@ def question_and_answer():
     index = random.randint(0, len(question) - 1)
     result = question[index]
     question[index] = "..."
-    return question, result
+    return str(question), result
