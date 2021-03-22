@@ -6,7 +6,7 @@ STAR_NUMBERS = 1
 END_NUMBERS = 99
 
 
-def is_prime():
+def is_prime(num):
     if num < 2:
         return False
     if num == 2:
