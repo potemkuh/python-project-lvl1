@@ -1,14 +1,9 @@
 #!/usr/bin/env python
-from brain_games import cli
-
-
-def greet():
-    print('Welcome to the Brain Games!')
+from brain_games import start_game
 
 
 def main():
-    greet()
-    cli.welcome_user()
+    start_game.play()
 
 
 if __name__ == '__main__':
