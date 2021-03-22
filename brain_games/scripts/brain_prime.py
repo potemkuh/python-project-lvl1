@@ -7,6 +7,5 @@ def main():
     start_game.play(prime)
 
 
-
 if __name__ == '__main__':
     main()
