@@ -10,5 +10,5 @@ def question_and_answer():
     index = random.randint(0, len(question) - 1)
     result = question[index]
     question[index] = "..."
-    new = ', '.join(question)
-    return str(question), result
+    new = ' '.join(question)
+    return str(new), result
