@@ -12,7 +12,7 @@ def play(game=None):
 
     while round < GAME_ROUND:
         question, result = game.question_and_answer()
-        print(f'question: {question}')
+        print(f'Question: {question}')
         answer = prompt.string('Your answer: ')
         if answer == str(result):
             print('Correct!')
