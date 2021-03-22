@@ -19,6 +19,6 @@ def play(game=None):
         else:
             print(f'{answer} is wrong answer ;(. Correct answer was {result}')
             print(f"Let's try again, {name}!")
-            break
+            return
         round += 1
     print(f'Congratulations, {name}!')

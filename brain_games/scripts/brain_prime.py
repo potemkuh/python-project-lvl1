@@ -4,7 +4,7 @@ from brain_games.games import prime
 
 
 def main():
-    start_game.play(prime.question_and_answer)
+    start_game.play(prime)
 
 
 
