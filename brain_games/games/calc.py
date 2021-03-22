@@ -1,5 +1,4 @@
 from random import randint, choice
-import prompt
 
 STAR_NUMBERS = 0
 END_NUMBERS = 99

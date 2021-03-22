@@ -1,6 +1,5 @@
 from math import sqrt
 from random import randint
-import prompt
 
 STAR_NUMBERS = 1
 END_NUMBERS = 99

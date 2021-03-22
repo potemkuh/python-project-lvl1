@@ -1,4 +1,3 @@
-import prompt
 from random import randint
 
 STAR_NUMBERS = 0

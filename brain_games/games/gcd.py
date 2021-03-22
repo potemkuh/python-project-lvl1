@@ -1,6 +1,5 @@
 from random import randint
 from math import gcd
-import prompt
 
 STAR_NUMBERS = 1
 END_NUMBERS = 99
