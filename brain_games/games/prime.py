@@ -1,7 +1,7 @@
 from math import sqrt
 from random import randint
 
-STAR_NUMBERS = 1
+START_NUMBERS = 1
 END_NUMBERS = 99
 
 
@@ -20,6 +20,6 @@ def is_prime(num):
 
 
 def question_and_answer():
-    question = randint(STAR_NUMBERS, END_NUMBERS)
+    question = randint(START_NUMBERS, END_NUMBERS)
     result = 'yes' if is_prime(question) else 'no'
     return question, result
