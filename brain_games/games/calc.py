@@ -1,12 +1,12 @@
 from random import randint, choice
 
-STAR_NUMBERS = 0
+START_NUMBERS = 0
 END_NUMBERS = 99
 
 
 def get_numbers():
-    num_1 = randint(STAR_NUMBERS, END_NUMBERS)
-    num_2 = randint(STAR_NUMBERS, END_NUMBERS)
+    num_1 = randint(START_NUMBERS, END_NUMBERS)
+    num_2 = randint(START_NUMBERS, END_NUMBERS)
     return num_1, num_2
 
 
