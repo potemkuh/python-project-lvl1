@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "hexlet-code"
-version = "8.1.9"
+version = "8.2.0"
 description = "brain games"
 authors = ["potemkuh"]
 packages = [

@@ -4,6 +4,7 @@ from brain_games.games import gcd
 
 
 def main():
+    print('Find the greatest common divisor of given numbers.')
     start_game.play(gcd)
 
 

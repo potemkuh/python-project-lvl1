@@ -4,6 +4,7 @@ from brain_games.games import calc
 
 
 def main():
+    print('What is the result of the expression?')
     start_game.play(calc)
 
 
